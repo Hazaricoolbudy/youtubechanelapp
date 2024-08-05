@@ -4,4 +4,10 @@ dotenv.config({
   path: "./env",
 });
 
-connectDb();
+connectDb()
+  .then(() => {
+    console.log(`database connected sucessfully`);
+  })
+  .catch((Err) => {
+    console.log(Err);
+  });
