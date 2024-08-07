@@ -1,8 +1,8 @@
 class ApiError extends Error {
   constructor(
     statusCode,
-    stack = "",
     message = "Somtings went wrongs",
+    stack = "",
     errors = []
   ) {
     super(message);
@@ -18,3 +18,5 @@ class ApiError extends Error {
     }
   }
 }
+
+export { ApiError };

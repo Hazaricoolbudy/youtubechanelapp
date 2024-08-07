@@ -29,7 +29,7 @@ const userSchema = mongoose.Schema(
       type: String, // cloudnary image url
       required: true,
     },
-    coveImage: {
+    coveimage: {
       type: String,
     },
     watchHistory: [
@@ -44,7 +44,6 @@ const userSchema = mongoose.Schema(
     },
     refreshToken: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }

@@ -54,3 +54,5 @@ const autoCropUrl = cloudinary.url("shoes", {
 });
 
 console.log(autoCropUrl);
+
+export { uploadOnCloudnary };
