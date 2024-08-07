@@ -29,7 +29,7 @@ const userSchema = mongoose.Schema(
       type: String, // cloudnary image url
       required: true,
     },
-    coveimage: {
+    coverimage: {
       type: String,
     },
     watchHistory: [
