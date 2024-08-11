@@ -4,6 +4,7 @@ import {
   accessRefreshToken,
   changeUserCurrentPassword,
   getCurrentUser,
+  getUserChanelProfile,
   loginUser,
   logoutUser,
   registerUser,
@@ -37,6 +38,10 @@ router.route("/change-user-details").patch(verifyJWT, updateUserDetails);
 router
   .route("/change-user-avatar")
   .patch(verifyJWT, upload.single("avatar"), updateUserAvatar);
-router.route("/change-user-cover").patch(verifyJWT, upDateCoverImage);
+router
+  .route("/change-user-cover")
+  .patch(verifyJWT, upload.single("coverimage"), upDateCoverImage);
+router.route("c/:username").get(verifyJWT, getUserChanelProfile);
+router.route("/watch-history").get(verifyJWT, watchHistory);
 
 export default router;
